@@ -1,12 +1,12 @@
 const homeControl = {
   home: (req, res) => {
-    res.render("../src/views/index.ejs");
+    res.render("index");
   },
   login: (req, res) => {
-    res.render("../src/views/login.ejs");
+    res.render("login");
   },
   playground: (req, res) =>{
-    res.render("../src/views/playground.ejs");
+    res.render("playground");
   }
 };
 module.exports = homeControl;

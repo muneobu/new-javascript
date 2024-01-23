@@ -9,4 +9,13 @@ const homeControl = {
     res.render("playground");
   }
 };
-module.exports = homeControl;
+const process = {
+  login : (req,res)=>{
+    console.log(req.body);
+  }
+};
+
+module.exports = {
+  homeControl,
+  process
+};

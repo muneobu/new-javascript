@@ -25,6 +25,9 @@ function login() {
       } else {
         alert(res.msg);
       }
+    }).catch((err) => {
+      const maratang = new Error("마라탕먹고싶당");
+      console.error(maratang);
     });
   // .catch((err) => console.error(new Error()));
 }

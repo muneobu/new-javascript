@@ -2,10 +2,10 @@ const e = require("express");
 const express = require("express");
 const apple = express.Router();
 const control = require("../../control/control.js");
-const userStorage = require("../../model/userStorage.js");
 
-const data = userStorage.getUsers("id", "pw");
-//const data = userStorage;
+// const userStorage = require("../../model/userStorage.js");
+// const data = userStorage.getUsers("id", "pw");
+// const data = userStorage;
 // const data = new userStorage();
 
 const response = {};

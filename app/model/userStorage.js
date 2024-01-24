@@ -1,8 +1,8 @@
 "use strict";
 class userStorage {
   static #data = {
-    id: ["banana", "tomato", "cherry"],
-    pw: ["bb", "tt", "cc"],
+    id: ["banana", "tomato", "cherry","maratang"],
+    pw: ["bb", "tt", "cc",],
     name: ["ba", "to", "ch"],
   };
   static getUsers(...args) {

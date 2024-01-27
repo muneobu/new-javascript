@@ -1,5 +1,5 @@
 const userStorage = require("../model/userStorage.js");
-const data = userStorage.getUsers("id", "pw");
+const data = userStorage.getUsers("id", "pw","name");
 const response = {};
 
 const homeControl = {

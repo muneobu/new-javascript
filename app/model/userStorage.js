@@ -11,7 +11,6 @@ class userStorage {
       if (users.hasOwnProperty(arg)) {
         newbie[arg] = users[arg];
       }
-      console.log(newbie);
       return newbie;
     }, {});
     console.log(newUsers);

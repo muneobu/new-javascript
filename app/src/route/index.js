@@ -8,7 +8,6 @@ const control = require("../../control/control.js");
 // const data = userStorage;
 // const data = new userStorage();
 
-const response = {};
 apple.get("/", control.homeControl.home);
 apple.get("/login", control.homeControl.login);
 apple.get("/playground", control.homeControl.playground);

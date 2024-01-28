@@ -13,9 +13,21 @@ class userStorage {
       }
       return newbie;
     }, {});
-    console.log(newUsers);
     return newUsers;
   }
+  static getUserInfo(id){
+  const users = this.#data;
+  const idx = users.id.indexOf(id);
+  const usersKey = Object.keys(users);
+
+  const userInfo = usersKey.reduce((userJungbo, info) => {
+    userJungbo[info] = users[info][idx];
+    return userJungbo;
+  },{})//info = [id,pw,name] usersKey였던것
+  return userInfo;
+  }
+  
 }
+
 
 module.exports = userStorage;

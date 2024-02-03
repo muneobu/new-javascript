@@ -1,7 +1,7 @@
-const userStorage = require("../model/userStorage.js");
+const userStorage = require("../../model/userStorage.js");
 const data = userStorage.getUsers("id", "pw","name");
 const response = {};
-const User = require("../model/User.js")
+const User = require("../../model/User.js")
 
 const homeControl = {
   home: (req, res) => {
@@ -12,6 +12,9 @@ const homeControl = {
   },
   playground: (req, res) =>{
     res.render("playground");
+  },
+  register:(req,res)=>{
+    res.render("register")
   }
 };
 const process = {

@@ -1,13 +1,17 @@
 const id = document.querySelector("#id");
+const name = document.querySelector("#name")
 const pw = document.querySelector("#pw");
+const confirmPw = document.querySelector("#confirm-pw");
 const btn = document.querySelector("#btn");
 
-btn.addEventListener("click", login);
+btn.addEventListener("click", register);
 
-function login() {
+function register() {
   const req = {
     id: id.value,
+    name: name.value,
     pw: pw.value,
+    confirmPw:confirmPw.value
   };
 
   fetch("/register", {
@@ -21,13 +25,12 @@ function login() {
     .then((res) => {
       console.log(res);
       if (res.success) {
-        location.href = "/login";  //로그인후 이동 주소
+        location.href = "/playground";  //로그인후 이동 주소
       } else {
         alert(res.msg);
       }
     }).catch((err) => {
-      const maratang = new Error("마라탕먹고싶당");
-      console.error(maratang);
+      const tteokbokki = new Error("떡볶이먹고싶당");
+      console.error(tteokbokki);
     });
-    //에러던지기
 }

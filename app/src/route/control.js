@@ -40,7 +40,11 @@ const process = {
     // } else {
     //   res.json({ msg: "존재하지 않는 아이디입니다" });
     // }
-  }
+  },
+  register :(req,res)=>{
+    const user = new User(req.body);
+    const response = user.register();
+    return res.json(response);}
 };
 
 module.exports = {

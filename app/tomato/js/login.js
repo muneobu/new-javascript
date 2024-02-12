@@ -10,7 +10,7 @@ function login() {
     pw: pw.value,
   };
 
-  fetch("/register", {
+  fetch("/login", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -21,7 +21,7 @@ function login() {
     .then((res) => {
       console.log(res);
       if (res.success) {
-        location.href = "/login";  //로그인후 이동 주소
+        location.href = "/playground";  //로그인후 이동 주소
       } else {
         alert(res.msg);
       }

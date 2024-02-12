@@ -25,7 +25,7 @@ function register() {
     .then((res) => {
       console.log(res);
       if (res.success) {
-        location.href = "/playground";  //로그인후 이동 주소
+        location.href = "/login";  //로그인후 이동 주소
       } else {
         alert(res.msg);
       }

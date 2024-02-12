@@ -11,9 +11,10 @@ const control = require("./control.js");
 apple.get("/", control.homeControl.home);
 apple.get("/login", control.homeControl.login);
 apple.get("/playground", control.homeControl.playground);
-
 apple.get("/register", control.homeControl.register);
+
 apple.post("/login", control.process.login);
+apple.post("/register", control.process.register);
 
 // apple.post("/login", (req, res) => {
 //   if (data.id.includes(req.body.id)) {

@@ -1,7 +1,7 @@
 "use strict";
 class userStorage {
   static #data = {
-    id: ["banana", "tomato", "cherry","maratang"],
+    id: ["banana", "tomato", "cherry"],
     pw: ["bb", "tt", "cc",],
     name: ["ba", "to", "ch"],
   };
@@ -25,6 +25,16 @@ class userStorage {
     return userJungbo;
   },{})//info = [id,pw,name] usersKey였던것
   return userInfo;
+  }
+  static save(userInfo){
+    const users = this.#data;
+    users.id.push(userInfo.id);
+    users.pw.push(userInfo.pw);
+    users.name.push(userInfo.name);
+    console.log(users);
+    return{
+      success: true
+    }
   }
   
 }

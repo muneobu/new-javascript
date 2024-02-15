@@ -7,11 +7,14 @@ const btn = document.querySelector("#btn");
 btn.addEventListener("click", register);
 
 function register() {
+  if(!id.value) return alert("Enter your id")
+  if(pw.value !== confirmPw.value)return alert("Check your password again");
+
+
   const req = {
     id: id.value,
     name: name.value,
     pw: pw.value,
-    confirmPw:confirmPw.value
   };
 
   fetch("/register", {

@@ -6,10 +6,11 @@ class User{
         this.body = body;
     }
     
-    login(){
+   async login(){
         const client = this.body;
-        const {id, pw, name} = Userstorage.getUserInfo(client.id);
-        console.log(id,pw,name)
+        const {id ,pw, name} = await Userstorage.getUserInfo(client.id);
+        console.log((await Userstorage.getUserInfo(client.id)),"user.js 12번째줄");
+
         if(client.id === "maratang"){
             throw new Error("yummy food");
         }else if(id){

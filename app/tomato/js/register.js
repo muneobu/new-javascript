@@ -33,7 +33,7 @@ function register() {
         alert(res.msg);
       }
     }).catch((err) => {
-      const tteokbokki = new Error("떡볶이먹고싶당");
+      const tteokbokki = new Error("회원가입 중 떡볶이먹고싶음 이슈");
       console.error(tteokbokki);
     });
 }

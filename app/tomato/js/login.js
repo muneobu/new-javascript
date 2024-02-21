@@ -19,14 +19,15 @@ function login() {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
+      // console.log(res,"login.js 22번째줄");
       if (res.success) {
         location.href = "/playground";  //로그인후 이동 주소
       } else {
         alert(res.msg);
+        console.log(res, "login.js 27번째줄")
       }
     }).catch((err) => {
-      const maratang = new Error("마라탕먹고싶당");
+      const maratang = new Error("로그인 중 마라탕먹고싶음 이슈");
       console.error(maratang);
     });
     //에러던지기

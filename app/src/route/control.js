@@ -1,7 +1,7 @@
-const userStorage = require("../../model/userStorage.js");
-const data = userStorage.getUsers("id", "pw","name");
+const userStorage = require("../model/userStorage.js");
+// const data = userStorage.getUsers("id", "pw","name");
 const response = {};
-const User = require("../../model/User.js")
+const User = require("../model/User.js")
 
 const homeControl = {
   home: (req, res) => {
@@ -18,9 +18,9 @@ const homeControl = {
   }
 };
 const process = {
-  login : (req,res)=>{
+  login :async (req,res)=>{
     const user = new User(req.body);
-    const response = user.login();
+    const response = await user.login();
     return res.json(response);
     // if(req.body.id === "maratang"){
     //   throw new Error("yummy food");

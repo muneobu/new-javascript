@@ -31,9 +31,9 @@ class User{
         
 
         }
-        register(){
+       async register(){
         const client = this.body;
-        const response =  Userstorage.save(client); 
+        const response = await Userstorage.save(client); 
         return response;
         }
 }

@@ -41,9 +41,9 @@ const process = {
     //   res.json({ msg: "존재하지 않는 아이디입니다" });
     // }
   },
-  register :(req,res)=>{
+  register :async (req,res)=>{
     const user = new User(req.body);
-    const response = user.register();
+    const response = await user.register();
     return res.json(response);}
 };
 

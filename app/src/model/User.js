@@ -15,9 +15,9 @@ class User{
             throw new Error("yummy food");
         }else if(id){
            if(id === client.id && pw === client.pw){
-            console.log(name,"succed to log in");
+            console.log(name,"succeeded to log in");
             return {success : true,
-            msg : "Login success"};
+            msg : "Loged in successfully"};
         }else{
             console.log(name,"failed to log in")
             return {
@@ -34,6 +34,9 @@ class User{
        async register(){
         const client = this.body;
         const response = await Userstorage.save(client); 
+        if(response.success){
+            console.log(response.newbieInfo.name , "succeeded to sign up")
+        }
         return response;
         }
 }

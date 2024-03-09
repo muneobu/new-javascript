@@ -1,6 +1,6 @@
 "use strict";
 
-const { use } = require("../route");
+// const { use } = require("../route");
 
 const fs = require("fs").promises;
 
@@ -60,14 +60,23 @@ static async save(userInfo){
   const users = await this.getUsers(true);
   console.log(users,"UserStorage.js 61");
   if(users.id.includes(userInfo.id)){
-    const err = new Error("중복된 id노 ㄷㄷ");
-    return err;
+    const res = {
+      success : false,
+      msg : "중복된 id"
+    }
+    return res;
     } else if(!users.id.includes(userInfo.id)){
     users.id.push(userInfo.id);
     users.pw.push(userInfo.pw);
     users.name.push(userInfo.name);
     fs.writeFile("./src/databases/users.json",JSON.stringify(users));
-    return {success : true};
+    return {success : true,
+    msg : "Registered successfully",
+  newbieInfo : {
+    id : userInfo.id,
+    pw : userInfo.pw,
+    name : userInfo.name
+  }};
   }
 }
 

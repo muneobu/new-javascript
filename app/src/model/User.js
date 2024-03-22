@@ -33,11 +33,21 @@ class User{
         }
        async register(){
         const client = this.body;
-        const response = await Userstorage.save(client); 
+        try{
+        const response = await Userstorage.save(client);
         if(response.success){
             console.log(response.newbieInfo.name , "succeeded to sign up")
         }
-        return response;
+        return response; }
+        catch(err){
+            console.error(err);
+            const res = {
+                success : false,
+                msg : err
+            }
+            return res;
+        }
+
         }
 }
 module.exports = User;

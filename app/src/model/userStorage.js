@@ -60,11 +60,7 @@ static async save(userInfo){
   const users = await this.getUsers(true);
   console.log(users,"UserStorage.js 61");
   if(users.id.includes(userInfo.id)){
-    const res = {
-      success : false,
-      msg : "중복된 id"
-    }
-    return res;
+  throw "중복된 id";
     } else if(!users.id.includes(userInfo.id)){
     users.id.push(userInfo.id);
     users.pw.push(userInfo.pw);

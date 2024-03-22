@@ -1,0 +1,43 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body{
+    size: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+.Box{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    size: 20%;
+    background-color: aliceblue;
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+    border-style:solid  ;
+    border-color: aliceblue;
+}
+.Txt{
+  font-family: "Roboto", sans-serif;
+    font-size: 80px;
+    color: cornflowerblue;
+    text-align: center;
+}
+.LoginBtn{
+    size: 30%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  font-family: "Roboto", sans-serif;
+    font-size: 120%;
+    text-align: center;
+    margin-left: 38%;
+    margin-right: 38%;
+    color: aliceblue;
+    background-color: cornflowerblue;
+    cursor:pointer;
+}

@@ -26,7 +26,7 @@ function register() {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
+      console.log(res,"register.js 29");
       if (res.success) {
         location.href = "/login";  //로그인후 이동 주소
       } else {

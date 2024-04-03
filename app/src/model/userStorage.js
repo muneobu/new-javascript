@@ -61,7 +61,9 @@ static async save(userInfo){
   console.log(users,"UserStorage.js 61");
   if(users.id.includes(userInfo.id)){
   throw "중복된 id";
-    } else if(!users.id.includes(userInfo.id)){
+    } else if(!userInfo.name){
+      throw "Please enter your name";
+    }else if(!users.id.includes(userInfo.id)){
     users.id.push(userInfo.id);
     users.pw.push(userInfo.pw);
     users.name.push(userInfo.name);

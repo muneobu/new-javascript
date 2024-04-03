@@ -22,24 +22,6 @@ const process = {
     const user = new User(req.body);
     const response = await user.login();
     return res.json(response);
-    // if(req.body.id === "maratang"){
-    //   throw new Error("yummy food");
-    // }else if (data.id.includes(req.body.id)) {
-    //   const idx = data.id.indexOf(req.body.id);
-    //   if (data.pw[idx] === req.body.pw) {
-    //     response.success = true;
-    //     response.msg = "login success";
-    //     console.log(response);
-    //     res.json(response);
-    //   } else {
-    //     response.success = false;
-    //     response.msg = "wrong password";
-    //     console.log(response);
-    //     res.json(response);
-    //   }
-    // } else {
-    //   res.json({ msg: "존재하지 않는 아이디입니다" });
-    // }
   },
   register :async (req,res)=>{
     const user = new User(req.body);
